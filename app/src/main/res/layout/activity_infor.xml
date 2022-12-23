@@ -4,31 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".infor">
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Infor">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textNombrePezInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:textSize="60dp"
         android:text="TextView" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imageInfo"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
         android:layout_weight="1"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/bettainicio" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textDescriptionInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textPrecioInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="TextView" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"

@@ -1,6 +1,7 @@
 package com.example.betta.Adaptadores;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.betta.Entidades.Producto;
+
+import com.example.betta.Infor;
 import com.example.betta.R;
 
 import java.util.ArrayList;
@@ -61,6 +64,7 @@ public class ProductAdapter extends BaseAdapter {
         view = layoutInflater.inflate(R.layout.producto_template,null);
 
         Producto producto =arrayProducto.get(i);
+
         ImageView imgPez= (ImageView)  view.findViewById(R.id.imgPez);
         TextView textNombrePez = (TextView)  view.findViewById(R.id.textNombrePez);
         TextView textDescription = (TextView)  view.findViewById(R.id.textDescription);
@@ -73,6 +77,18 @@ public class ProductAdapter extends BaseAdapter {
         textNombrePez.setText(producto.getName());
         textDescription.setText(producto.getDescription());
         textPrecio.setText(producto.getPrice());
+
+        imgPez.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context.getApplicationContext(), Infor.class);
+                intent.putExtra("image", producto.getImage());
+                intent.putExtra("name", producto.getName());
+                intent.putExtra("description", producto.getDescription());
+                intent.putExtra("price",producto.getPrice());
+                context.startActivity(intent);
+            }
+        });
 
         btnBorrar.setOnClickListener(new View.OnClickListener() {
             @Override

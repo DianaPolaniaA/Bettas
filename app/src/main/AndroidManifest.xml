@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Betta"
         tools:targetApi="31">
         <activity
-            android:name=".infor"
+            android:name=".Infor"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
